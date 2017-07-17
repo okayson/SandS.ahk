@@ -1,0 +1,28 @@
+SnadS
+SpaceDown中の文字入力はShift+文字とする。
+SpaceDown->Upした場合は通常処理とする。
+//SpaceDownのスペース連続入力は行いたい。
+
+Sticky Shift
+
+Shift押下状態でアルファベット入力とする。
+
+
+// 以下、ダミーコード
+void onSpaceKeyDown()
+{
+	if ( !isSpaceKeyDown )
+	{
+		isSpaceKeyDown = true;
+		
+		sendKey(L-ShiftDown);
+		
+	}
+}
+void onSpaceKeyUp()
+{
+	endKey(L-ShiftUp);
+	isSpaceKeyDown = false;
+}
+
+Tn
